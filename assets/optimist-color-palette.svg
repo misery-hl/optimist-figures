@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1038" width="1040" height="1038" role="img" aria-label="Optimist color palette">
+<style>.title{fill:#141A2E;font:700 30px Inter,Arial,sans-serif}.subv{fill:#5A6072;font:400 15px Inter,Arial,sans-serif}.sec{fill:#141A2E;font:700 15px Inter,Arial,sans-serif}.ov{fill:#3A4056;font:600 12px Inter,Arial,sans-serif}.hex{fill:#141A2E;font:500 12px "SF Mono",Menlo,monospace}.note{fill:#8A90A3;font:400 11px Inter,Arial,sans-serif}</style>
+<rect x="0" y="0" width="1040" height="1038" fill="#FFFFFF"/>
+<text x="40" y="52" class="title">Optimist — Color Palette</text>
+<text x="40" y="78" class="subv">Base colors #5B5BD6 and #D8DEF1, with scale, neutrals, surfaces, data series and semantics</text>
+<text x="40" y="104" class="sec">Core</text>
+<rect x="40.0" y="128" width="190.0" height="92" rx="10" fill="#5B5BD6" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="120" class="ov">Primary</text>
+<text x="40.0" y="238" class="hex">#5B5BD6</text>
+<text x="40.0" y="253" class="note">brand</text>
+<rect x="244.0" y="128" width="190.0" height="92" rx="10" fill="#D8DEF1" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="244.0" y="120" class="ov">Background</text>
+<text x="244.0" y="238" class="hex">#D8DEF1</text>
+<text x="244.0" y="253" class="note">base</text>
+<text x="40" y="286" class="sec">Brand — Periwinkle scale</text>
+<rect x="40.0" y="310" width="83.4" height="66" rx="10" fill="#EEEEFC" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="302" class="ov">50</text>
+<text x="40.0" y="394" class="hex">#EEEEFC</text>
+<rect x="137.4" y="310" width="83.4" height="66" rx="10" fill="#DEDFF8" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="137.4" y="302" class="ov">100</text>
+<text x="137.4" y="394" class="hex">#DEDFF8</text>
+<rect x="234.8" y="310" width="83.4" height="66" rx="10" fill="#C0C1F1" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="234.8" y="302" class="ov">200</text>
+<text x="234.8" y="394" class="hex">#C0C1F1</text>
+<rect x="332.2" y="310" width="83.4" height="66" rx="10" fill="#9EA0EA" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="332.2" y="302" class="ov">300</text>
+<text x="332.2" y="394" class="hex">#9EA0EA</text>
+<rect x="429.6" y="310" width="83.4" height="66" rx="10" fill="#7B7BE1" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="429.6" y="302" class="ov">400</text>
+<text x="429.6" y="394" class="hex">#7B7BE1</text>
+<rect x="527.0" y="310" width="83.4" height="66" rx="10" fill="#5B5BD6" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="527.0" y="302" class="ov">500</text>
+<text x="527.0" y="394" class="hex">#5B5BD6</text>
+<text x="527.0" y="409" class="note">primary</text>
+<rect x="624.4" y="310" width="83.4" height="66" rx="10" fill="#4A48B6" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="624.4" y="302" class="ov">600</text>
+<text x="624.4" y="394" class="hex">#4A48B6</text>
+<rect x="721.8" y="310" width="83.4" height="66" rx="10" fill="#393893" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="721.8" y="302" class="ov">700</text>
+<text x="721.8" y="394" class="hex">#393893</text>
+<rect x="819.2" y="310" width="83.4" height="66" rx="10" fill="#2B2B6E" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="819.2" y="302" class="ov">800</text>
+<text x="819.2" y="394" class="hex">#2B2B6E</text>
+<rect x="916.6" y="310" width="83.4" height="66" rx="10" fill="#1D1D49" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="916.6" y="302" class="ov">900</text>
+<text x="916.6" y="394" class="hex">#1D1D49</text>
+<text x="40" y="442" class="sec">Neutrals — Ink</text>
+<rect x="40.0" y="466" width="148.3" height="66" rx="10" fill="#141A2E" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="458" class="ov">Ink</text>
+<text x="40.0" y="550" class="hex">#141A2E</text>
+<text x="40.0" y="565" class="note">text</text>
+<rect x="202.3" y="466" width="148.3" height="66" rx="10" fill="#3A4056" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="202.3" y="458" class="ov">Ink 700</text>
+<text x="202.3" y="550" class="hex">#3A4056</text>
+<rect x="364.7" y="466" width="148.3" height="66" rx="10" fill="#5A6072" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="364.7" y="458" class="ov">Muted</text>
+<text x="364.7" y="550" class="hex">#5A6072</text>
+<text x="364.7" y="565" class="note">text</text>
+<rect x="527.0" y="466" width="148.3" height="66" rx="10" fill="#838AA0" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="527.0" y="458" class="ov">Slate</text>
+<text x="527.0" y="550" class="hex">#838AA0</text>
+<rect x="689.3" y="466" width="148.3" height="66" rx="10" fill="#C3CBE8" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="689.3" y="458" class="ov">Border</text>
+<text x="689.3" y="550" class="hex">#C3CBE8</text>
+<text x="689.3" y="565" class="note">hairline</text>
+<rect x="851.7" y="466" width="148.3" height="66" rx="10" fill="#E7EAF3" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="851.7" y="458" class="ov">Divider</text>
+<text x="851.7" y="550" class="hex">#E7EAF3</text>
+<text x="40" y="598" class="sec">Backgrounds and surfaces</text>
+<rect x="40.0" y="622" width="150.0" height="66" rx="10" fill="#D8DEF1" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="614" class="ov">Background</text>
+<text x="40.0" y="706" class="hex">#D8DEF1</text>
+<rect x="204.0" y="622" width="150.0" height="66" rx="10" fill="#E7EBF7" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="204.0" y="614" class="ov">Bg Light</text>
+<text x="204.0" y="706" class="hex">#E7EBF7</text>
+<rect x="368.0" y="622" width="150.0" height="66" rx="10" fill="#FFFFFF" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="368.0" y="614" class="ov">Surface</text>
+<text x="368.0" y="706" class="hex">#FFFFFF</text>
+<rect x="532.0" y="622" width="150.0" height="66" rx="10" fill="#F3F5FC" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="532.0" y="614" class="ov">Surface Tint</text>
+<text x="532.0" y="706" class="hex">#F3F5FC</text>
+<text x="40" y="742" class="sec">Data series</text>
+<rect x="40.0" y="766" width="148.3" height="66" rx="10" fill="#5B5BD6" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="758" class="ov">Meta</text>
+<text x="40.0" y="850" class="hex">#5B5BD6</text>
+<rect x="202.3" y="766" width="148.3" height="66" rx="10" fill="#37418C" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="202.3" y="758" class="ov">Google</text>
+<text x="202.3" y="850" class="hex">#37418C</text>
+<rect x="364.7" y="766" width="148.3" height="66" rx="10" fill="#8FA6E8" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="364.7" y="758" class="ov">Amazon</text>
+<text x="364.7" y="850" class="hex">#8FA6E8</text>
+<rect x="527.0" y="766" width="148.3" height="66" rx="10" fill="#6FBFA6" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="527.0" y="758" class="ov">Apple</text>
+<text x="527.0" y="850" class="hex">#6FBFA6</text>
+<rect x="689.3" y="766" width="148.3" height="66" rx="10" fill="#4E86C4" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="689.3" y="758" class="ov">Microsoft</text>
+<text x="689.3" y="850" class="hex">#4E86C4</text>
+<rect x="851.7" y="766" width="148.3" height="66" rx="10" fill="#B27BB0" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="851.7" y="758" class="ov">ByteDance</text>
+<text x="851.7" y="850" class="hex">#B27BB0</text>
+<text x="40" y="886" class="sec">Semantic (muted)</text>
+<rect x="40.0" y="910" width="150.0" height="66" rx="10" fill="#4FA98C" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="40.0" y="902" class="ov">Success</text>
+<text x="40.0" y="994" class="hex">#4FA98C</text>
+<rect x="204.0" y="910" width="150.0" height="66" rx="10" fill="#E0A85B" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="204.0" y="902" class="ov">Warning</text>
+<text x="204.0" y="994" class="hex">#E0A85B</text>
+<rect x="368.0" y="910" width="150.0" height="66" rx="10" fill="#D06A6A" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="368.0" y="902" class="ov">Error</text>
+<text x="368.0" y="994" class="hex">#D06A6A</text>
+<rect x="532.0" y="910" width="150.0" height="66" rx="10" fill="#4E86C4" stroke="#141A2E" stroke-opacity="0.10"/>
+<text x="532.0" y="902" class="ov">Info</text>
+<text x="532.0" y="994" class="hex">#4E86C4</text>
+</svg>
