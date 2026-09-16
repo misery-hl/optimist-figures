@@ -36,8 +36,8 @@ Always produce both, from the same generator run, under the same basename:
 - **`<name>.svg`** — the editable master. Imports cleanly into Figma; text stays live.
 - **`<name>.png`** — **3200 × 1800** (2×), for dropping straight into a draft or a deck.
 
-Use `Fig.save()` with the packaged Inter faces, preferably via `resvg-py`, as explained
-in the skill entrypoint. CairoSVG is an alternative only when its font resolver has been
+Use the local export helper (`Fig.save()` or equivalent) with the packaged Inter faces,
+preferably via `resvg-py`, as explained in the [renderer contract](local-renderer-update.md). CairoSVG is an alternative only when its font resolver has been
 verified against these faces. The PNG must match the live text in the SVG.
 
 ## The two automated checks — both must pass
@@ -165,7 +165,9 @@ quantitative comparison through font size; use a chart when relative magnitude n
 
 ## Workflow
 1. **Pick the figure type** and open `references/figure-patterns.md`.
-2. **Generate the SVG** with a Python generator over `scripts/okit.py`. Track label boxes.
+2. **Generate the SVG** with the verified local renderer, often a locally generated
+   `scripts/okit.py`. Track label boxes. If missing or outdated, follow the
+   [local renderer contract](local-renderer-update.md) first.
 3. **Run both checks** — clearance and containment. Fix every failure at its cause.
 4. **Render and LOOK.** Then read the figure back for repetition.
 5. **Export the pair and deliver both** — `<name>.svg` plus `<name>.png` at 3200 × 1800.
@@ -206,7 +208,6 @@ Width beats ink height, and correct sizes land on round numbers.
 - `assets/optimist-logo.svg` — the full lockup, footer lower-right at 240 × 77.
 - `assets/optimist-color-palette.svg` — the original white palette swatch sheet.
 - `assets/optimist-palettes.json` — color roles for `white` and `navy`.
-- `scripts/okit.py` — palette, canvas, header/footer at the measured geometry (header as one
-  group), text/rect/arrow primitives, a two-run lead-phrase helper, arrow sampling for
-  diagonals, the clearance and containment checks, and a `save()` that writes the SVG and
-  the 2× PNG together.
+- [Local renderer contract](local-renderer-update.md) — build or update the per-machine
+  toolkit, including palette defaults, measured header/footer, primitives, both checks
+  and paired SVG/PNG export. Executable toolkit files are not included in this repository.

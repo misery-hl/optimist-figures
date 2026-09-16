@@ -1,3 +1,8 @@
+# Renderers are generated and maintained locally, never distributed by this repo.
+scripts/
+*.py
+*.ipynb
+requirements.txt
 __pycache__/
 *.pyc
 .venv/

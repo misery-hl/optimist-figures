@@ -6,11 +6,13 @@ Optimist palette. Preserve an existing palette unless a switch is requested.
 
 ## Palette
 
-Use `f = Fig(palette="navy")` and `C = f.colors` from `scripts/okit.py`.
+After completing the [local renderer update](local-renderer-update.md), select navy
+through the local API: conventionally `Fig(palette="navy")` and `f.colors`, or an
+equivalent configuration. These interfaces must be implemented locally, not downloaded.
 The machine-readable [palettes](../assets/optimist-palettes.json),
 [swatch sheet](../assets/optimist-navy-palette.svg) and
 [illustrative chart](../examples/palette-navy.png) show the colors together.
-`NAVY` is also exported; `DARK_ARTICLE` remains a compatibility alias.
+If local generators import `DARK_ARTICLE`, preserve it as a navy alias during the update.
 
 | Role | Hex | Use |
 |---|---|---|
@@ -55,19 +57,9 @@ or imply that teal always means positive performance.
   checks, and visual inspection. The reference supplies styling, never reusable data.
 
 The chart preview uses invented, clearly labeled values to demonstrate styling. Never
-reuse its claims, dates or data in research. The supplied generator is an example of
-layout, not an instruction to add a spike, legend or annotation to every chart.
+reuse its claims, dates or data in research. The visual reference demonstrates
+layout; it does not require a spike, legend or annotation in every chart.
 
-```python
-from okit import Fig
-
-f = Fig(palette="navy")
-C = f.colors
-f.header("A title grounded in the data", "Metric, units and comparison window")
-f.text(127, 200, "An explanatory label")  # correct light text by default
-f.line(127, 230, 1550, 230)              # subtle grid color by default
-# Use C["historical"], C["focus"] and C["exception"] only where the data warrant them.
-f.footer("Retrieval date", "Source name and URL", "Material methodology or coverage limit.")
-assert f.check() and f.check_containment()
-f.save("figure.svg")
-```
+Use the selected palette for text, rules and marks as well as data series. The
+[local renderer contract](local-renderer-update.md) defines default behavior and exact
+geometry for each palette, independent of the implementation on any one machine.

@@ -26,61 +26,54 @@ Both previews use the same invented values, solely to demonstrate styling.
 Explicit palette requests take precedence. Edits keep the existing palette unless a
 switch is requested. New figures default to white when no palette is specified.
 
-## Install
+## Install or update your local skill
 
-Copy or clone this repository as an `optimist-figures` folder in your agent's skills
-directory, keeping `SKILL.md`, `references/`, `assets/` and `scripts/` together. Point
-an agent without a skill installer to [SKILL.md](SKILL.md). The renderer and licensed
-Inter fonts are included; no toolkit generation step is needed.
+This is an **instructions-and-assets repository**. Python files and other executable
+scripts are generated and maintained locally by each person's agent; they are not part
+of the shared package. The implementation and filenames may differ between colleagues.
 
-Use the natural-language requests above, or invoke the installed skill by name with
-your chart brief and a palette. Sources and calculations still need to be established
-for each new data figure; the previews do not supply reusable research data.
+Give your agent this update request:
 
-## Renderer
+> Update my installed Optimist figures skill from the latest `main` branch of
+> https://github.com/misery-hl/optimist-figures. Back up and preserve my local renderer
+> and customizations while refreshing the shared instructions and assets. Read `SKILL.md`
+> and `references/local-renderer-update.md`, then inspect and adapt my own renderer to
+> support the named navy and white palettes. If I have no renderer, build it locally
+> from those instructions. Apply the palette to text, lines, charts, header and footer;
+> preserve existing white behavior and the canonical Optimist O alignment. Render and
+> inspect both palettes and run the specified layout and compatibility checks. Keep all
+> generated scripts local. Report the changes and checks actually completed.
 
-From the repository or installed skill folder:
+An agent doing a fresh installation should place the repository's instructions and
+assets together in an `optimist-figures` skill folder, then follow the same local setup
+reference. An agent updating an existing installation must inspect its renderer rather
+than assume that a shared `okit.py` or a particular Python API exists. Refreshing the
+Markdown alone does not implement the palette support in an older renderer.
 
-```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python scripts/palette_previews.py
-.venv/bin/python scripts/test_palettes.py
-.venv/bin/python scripts/okit.py
-```
+## Local renderer contract
 
-The last command intentionally detects an overflowing label to demonstrate that
-clearance and containment are separate checks. Real figures must pass both checks,
-then be inspected as rendered PNGs.
+[Build or update your local renderer](references/local-renderer-update.md) gives the
+implementation behavior, exact palette routing, default color roles, header/footer
+geometry, compatibility requirements, construction contract and acceptance checks.
+It works for a fresh installation and an existing toolkit with different code.
 
-In a Python generator, add this skill's `scripts/` directory to the import path and use:
+Once adapted, a Python toolkit using `Fig` should accept `Fig(palette="navy")` and
+`Fig(palette="white")`; another renderer can expose equivalent configuration. The agent
+must verify or implement that interface locally before using it. The repository supplies
+no Python implementation or test scripts to download.
 
-```python
-from okit import Fig
-
-f = Fig(palette="navy")  # or "white"; Fig() retains the standard white palette
-C = f.colors
-f.header("A title supported by the evidence", "Metric, units and time window")
-f.text(127, 200, "A supporting label")
-f.line(127, 230, 1550, 230)
-# Draw measured data using C["historical"], C["focus"], C["exception"], etc.
-f.footer("Retrieval date", "Source name and URL", "Material methodology or coverage limit.")
-assert f.check() and f.check_containment()
-f.save("figure.svg")
-```
-
-The palette sets the canvas, primitive defaults, title, subtitle, brand marks and footer.
-For chart geometry and plot framing, follow the selected palette's reference.
-Explicit colors passed to a primitive still override its defaults. Legacy light constants
-and the `DARK_ARTICLE` import remain available for existing generators.
-
-- [SKILL.md](SKILL.md): palette routing and figure workflow.
+- [SKILL.md](SKILL.md): palette selection, setup trigger and figure workflow.
+- [Local renderer update](references/local-renderer-update.md): instructions for each agent.
 - [Brand specification](references/brand-spec.md): standard white palette, geometry and checks.
 - [Navy specification](references/navy-palette.md): navy colors and article treatment.
 - [Figure patterns](references/figure-patterns.md): chart and diagram recipes.
 - [Palette JSON](assets/optimist-palettes.json) and [navy swatches](assets/optimist-navy-palette.svg).
-- [Preview generator](scripts/palette_previews.py): reproduces both examples and the swatches.
+- [Illustrative preview data](examples/palette-preview-data.json): optional fixture for local verification.
 - [Inter license](assets/fonts/LICENSE.txt): license for the bundled fonts.
+
+The SVG and PNG previews are references for appearance. They do not supply research
+claims or source data for a new figure. Keep executable scripts out of repository commits;
+`.gitignore` excludes the local toolkit directory and Python files.
 
 ## Earlier figures
 

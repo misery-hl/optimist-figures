@@ -1,6 +1,8 @@
 # Figure Patterns (recipes + coordinate math)
 
-Build computed-geometry figures with a small Python generator using `scripts/okit.py`.
+Build computed-geometry figures with the local toolkit, often `scripts/okit.py`.
+If it is missing or has not been upgraded, follow [local-renderer-update.md](local-renderer-update.md)
+first. Helper names below describe the target behavior; map them to the local API.
 Always render to PNG and eyeball before delivering. The color examples below describe
 `white`; for `navy`, use the same geometry with the roles and plot treatment in
 [navy-palette.md](navy-palette.md). Never carry white surfaces or black labels into navy
@@ -46,7 +48,7 @@ Use for a few prominent rates, totals or comparisons followed by a related scena
 - Node = periwinkle circle (r≈34) with a white line icon. Label radially outside: top→centered above, bottom→centered below, right→left-anchored, left→right-anchored. Vertically centre multi-line labels on the node.
 - Centre label: short thesis line(s), lead word periwinkle.
 - Optional feeder row (e.g. "mandate accelerants"): a row of white chips + periwinkle arrows below, with a short dashed up-arrow into the ring.
-- `okit.Fig.arc_arrow(cx,cy,R,a0,a1,color)` does the arc + head.
+- A local `arc_arrow(cx,cy,R,a0,a1,color)` helper or equivalent should draw the arc + head.
 
 ## 3) Process flow
 - Row of white chips (rounded, `#C3CBE8` border), centered 1–2 line labels, joined by periwinkle arrows (line + triangle). Optional left-side group label.
@@ -60,7 +62,8 @@ Use for a few prominent rates, totals or comparisons followed by a related scena
 - Overlaid line = amber `#E8A63C`, 3px. Warm-over-cool keeps the line legible on the purple fill. (A cool line like teal muddies against purple — only use it for line-only charts.)
 
 ## Header and logo
-Use `Fig(palette="white")` or `Fig(palette="navy")`, then `f.header()` and `f.footer()`.
+After the local renderer upgrade, use `Fig(palette="white")` or `Fig(palette="navy")`,
+then `f.header()` and `f.footer()`, or the local API equivalents.
 Both methods select the matching type, colors and geometry. Both palettes retain the
 canonical 84 × 84 O at (19, 35), with title/subtitle baselines at 65/112 and x=127.
 Never use the retired lower-left logo recipe. See the [navy reference](navy-palette.md)

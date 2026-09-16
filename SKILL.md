@@ -23,11 +23,24 @@ asked to switch. For a new figure without a palette request, use `white`. “Whi
 the established light palette; it does not change the canvas to pure white. Treat “dark”
 as `navy`, and “light,” “lavender,” or “standard” as `white`.
 
-Initialize `Fig(palette="navy")` or `Fig(palette="white")`. Read chart colors from
-`f.colors`; header, footer and primitive defaults follow that choice automatically.
-`Fig()` and legacy constants remain white for compatibility. Do not import legacy
-`BG`, `BLK`, or `PALETTE` for a navy figure. Palette selection changes the whole
-treatment, including plot framing and typography, while preserving evidence and content.
+## Local renderer setup or upgrade
+
+This shared skill contains **instructions and assets, not executable scripts**. Each
+installation has its own locally generated renderer, which may use different filenames,
+helpers or libraries. When installing/updating this skill, or if the renderer lacks named
+palettes, read [the local renderer update instructions](references/local-renderer-update.md)
+and inspect the actual local implementation. Adapt it, or create it if missing, and run
+its acceptance checks. Do not assume that refreshing these Markdown files upgrades code.
+Preserve local scripts and customizations when refreshing the shared package.
+
+The target Python interface, where compatible, is `Fig(palette="navy")` or
+`Fig(palette="white")`, with colors from `f.colors` and palette-aware header, footer and
+primitive defaults. Other renderers should implement equivalent behavior. Verify or add
+these capabilities before calling them; no shared `scripts/okit.py` is available to fetch.
+Keep legacy no-argument behavior and constants white. Resolve navy colors per figure,
+not by changing shared `BG`, `BLK` or `PALETTE` constants. Palette selection changes the
+whole treatment, including plot framing and typography, while preserving evidence and
+content. Keep generated scripts local rather than committing them to the shared repo.
 
 ## Workflow
 
@@ -40,13 +53,15 @@ treatment, including plot framing and typography, while preserving evidence and 
    Name estimates and missing coverage. A tax-rate-times-volume estimate is not a record
    of executions; an execution is not proof of market impact. A reference figure supplies
    styling, not fresh evidence. Refresh live data before republishing.
-3. Write a Python generator importing `scripts/okit.py`. Use bundled Inter faces and
-   brand paths. Track every label and meaningful object with honest groups. Use container
+3. Use the verified local renderer (often a locally generated `scripts/okit.py`).
+   Follow its actual interface and the selected palette reference. Use bundled Inter
+   faces and brand paths. Track every label and meaningful object with honest groups. Use container
    ownership for card contents and sampled boxes for diagonal connectors.
-4. Run `f.check()` and `f.check_containment()` and resolve their failures before export.
+4. Run independent clearance and containment checks (`f.check()` and
+   `f.check_containment()` or their local equivalents) and resolve failures before export.
    Shorten text or change geometry; do not shrink below the brand scale or hide collisions
    by merging unrelated groups. Grouping exemptions cannot replace visual inspection.
-5. Call `f.save(path)` and inspect the actual PNG. Check typeface, clipping, text balance,
+5. Export through `f.save(path)` or the local equivalent and inspect the actual PNG. Check typeface, clipping, text balance,
    label clarity, numeric consistency, and whether the title overstates the evidence.
    Keep each distinction to one naming plus its visual encoding.
 6. Deliver both formats, with the data and a concise methodology when data are material.
@@ -65,18 +80,12 @@ for this treatment. Preserve approved wording and data during a visual facelift;
 
 ## Runtime
 
-The toolkit uses Pillow for actual glyph measurements and `resvg-py` for deterministic
-PNG rendering with the packaged fonts. Install these in an isolated environment as needed:
-
-```sh
-python -m pip install -r requirements.txt
-```
-
-`cairosvg` is an alternative when Cairo and these Inter faces are installed and verified
-in its font resolver. Prefer the bundled-font renderer to avoid silent font substitution.
-Run `python scripts/okit.py` to verify the independent clearance and containment checks:
-the deliberate overflow must fail containment while clearance passes. This self-test does
-not replace running both checks on the actual figure.
+Use the existing local renderer and install any missing dependencies in its environment.
+Pillow can measure actual Inter glyphs; `resvg-py` can produce deterministic PNGs directly
+from the packaged fonts. CairoSVG is acceptable when its Inter font resolution has been
+verified. There is no shared requirements file or executable toolkit to download.
+See the [construction and acceptance contract](references/local-renderer-update.md)
+for font measurement, export and independent layout checks.
 
 ## Requested variations
 
@@ -88,7 +97,7 @@ Otherwise generate variants locally. Do not delegate ordinary single-figure requ
 
 ## Resources
 
-- [Renderer and palette previews](README.md#renderer): setup and reproducible examples.
-- `scripts/okit.py`: measured primitives, named palettes, checks and export.
+- [Install/update request](README.md#install-or-update-your-local-skill): wording colleagues can give their agents.
+- [Local renderer update](references/local-renderer-update.md): adapt an existing toolkit or build one locally.
 - `assets/optimist-palettes.json`: machine-readable color roles for both palettes.
 - `assets/fonts/`: bundled Inter Regular, SemiBold and Bold, with their license.
