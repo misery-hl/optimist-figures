@@ -1,0 +1,4 @@
+interface:
+  display_name: "Optimist Figures"
+  short_description: "Optimist SVG and PNG figures in navy or white"
+  default_prompt: "Use $optimist-figures to create a source-backed article figure as SVG and PNG, using the requested navy or white palette."

@@ -1,8 +1,7 @@
-# the toolkit is generated per-machine from the prompt in README.md
-scripts/okit.py
 __pycache__/
 *.pyc
-
-# working output
+.venv/
+*.layout.json
+.DS_Store
 *.svg.bak
 toolkit_test.*

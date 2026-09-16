@@ -1,0 +1,33 @@
+{
+  "default": "white",
+  "palettes": {
+    "white": {
+      "background": "#D8DEF1",
+      "text": "#000000",
+      "secondary": "#000000",
+      "muted": "#000000",
+      "grid": "#C3CBE8",
+      "baseline": "#C6CDD1",
+      "historical": "#37418C",
+      "exception": "#E8A63C",
+      "focus": "#5B5BD6",
+      "event_band": "#FFF6E6",
+      "surface": "#FFFFFF",
+      "heading": "#141A2E"
+    },
+    "navy": {
+      "background": "#151D27",
+      "text": "#F0F3F6",
+      "secondary": "#B6C1CE",
+      "muted": "#91A0B1",
+      "grid": "#2C3744",
+      "baseline": "#506071",
+      "historical": "#668097",
+      "exception": "#C6A571",
+      "focus": "#55CBB6",
+      "event_band": "#20242A",
+      "surface": "#20242A",
+      "heading": "#F0F3F6"
+    }
+  }
+}
